@@ -1,0 +1,1517 @@
+import { n as e, r as t, t as n } from "./index-CFkwsXlE.js";
+var r = (...e) =>
+    e
+      .filter((e, t, n) => !!e && e.trim() !== `` && n.indexOf(e) === t)
+      .join(` `)
+      .trim(),
+  i = (e) => e.replace(/([a-z0-9])([A-Z])/g, `$1-$2`).toLowerCase(),
+  a = (e) =>
+    e.replace(/^([A-Z])|[\s-_]+(\w)/g, (e, t, n) =>
+      n ? n.toUpperCase() : t.toLowerCase(),
+    ),
+  o = (e) => {
+    let t = a(e);
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  },
+  s = {
+    xmlns: `http://www.w3.org/2000/svg`,
+    width: 24,
+    height: 24,
+    viewBox: `0 0 24 24`,
+    fill: `none`,
+    stroke: `currentColor`,
+    strokeWidth: 2,
+    strokeLinecap: `round`,
+    strokeLinejoin: `round`,
+  },
+  c = (e) => {
+    for (let t in e)
+      if (t.startsWith(`aria-`) || t === `role` || t === `title`) return !0;
+    return !1;
+  },
+  l = t(e()),
+  u = (0, l.forwardRef)(
+    (
+      {
+        color: e = `currentColor`,
+        size: t = 24,
+        strokeWidth: n = 2,
+        absoluteStrokeWidth: i,
+        className: a = ``,
+        children: o,
+        iconNode: u,
+        ...d
+      },
+      f,
+    ) =>
+      (0, l.createElement)(
+        `svg`,
+        {
+          ref: f,
+          ...s,
+          width: t,
+          height: t,
+          stroke: e,
+          strokeWidth: i ? (Number(n) * 24) / Number(t) : n,
+          className: r(`lucide`, a),
+          ...(!o && !c(d) && { "aria-hidden": `true` }),
+          ...d,
+        },
+        [
+          ...u.map(([e, t]) => (0, l.createElement)(e, t)),
+          ...(Array.isArray(o) ? o : [o]),
+        ],
+      ),
+  ),
+  d = (e, t) => {
+    let n = (0, l.forwardRef)(({ className: n, ...a }, s) =>
+      (0, l.createElement)(u, {
+        ref: s,
+        iconNode: t,
+        className: r(`lucide-${i(o(e))}`, `lucide-${e}`, n),
+        ...a,
+      }),
+    );
+    return ((n.displayName = o(e)), n);
+  },
+  f = d(`arrow-left`, [
+    [`path`, { d: `m12 19-7-7 7-7`, key: `1l729n` }],
+    [`path`, { d: `M19 12H5`, key: `x3x0zl` }],
+  ]),
+  p = d(`arrow-right`, [
+    [`path`, { d: `M5 12h14`, key: `1ays0h` }],
+    [`path`, { d: `m12 5 7 7-7 7`, key: `xquz4c` }],
+  ]),
+  m = d(`chevron-right`, [[`path`, { d: `m9 18 6-6-6-6`, key: `mthhwq` }]]),
+  h = d(`download`, [
+    [`path`, { d: `M12 15V3`, key: `m9g1x1` }],
+    [`path`, { d: `M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4`, key: `ih7n3h` }],
+    [`path`, { d: `m7 10 5 5 5-5`, key: `brsn70` }],
+  ]),
+  g = d(`file-text`, [
+    [
+      `path`,
+      {
+        d: `M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z`,
+        key: `1oefj6`,
+      },
+    ],
+    [`path`, { d: `M14 2v5a1 1 0 0 0 1 1h5`, key: `wfsgrz` }],
+    [`path`, { d: `M10 9H8`, key: `b1mrlr` }],
+    [`path`, { d: `M16 13H8`, key: `t4e002` }],
+    [`path`, { d: `M16 17H8`, key: `z1uh3a` }],
+  ]),
+  _ = d(`folder-open`, [
+    [
+      `path`,
+      {
+        d: `m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2`,
+        key: `usdka0`,
+      },
+    ],
+  ]),
+  ee = d(`folder`, [
+    [
+      `path`,
+      {
+        d: `M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z`,
+        key: `1kt360`,
+      },
+    ],
+  ]),
+  v = d(`image`, [
+    [
+      `rect`,
+      {
+        width: `18`,
+        height: `18`,
+        x: `3`,
+        y: `3`,
+        rx: `2`,
+        ry: `2`,
+        key: `1m3agn`,
+      },
+    ],
+    [`circle`, { cx: `9`, cy: `9`, r: `2`, key: `af1f0g` }],
+    [`path`, { d: `m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21`, key: `1xmnt7` }],
+  ]),
+  y = d(`key-round`, [
+    [
+      `path`,
+      {
+        d: `M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z`,
+        key: `1s6t7t`,
+      },
+    ],
+    [
+      `circle`,
+      { cx: `16.5`, cy: `7.5`, r: `.5`, fill: `currentColor`, key: `w0ekpg` },
+    ],
+  ]),
+  b = d(`lock`, [
+    [
+      `rect`,
+      {
+        width: `18`,
+        height: `11`,
+        x: `3`,
+        y: `11`,
+        rx: `2`,
+        ry: `2`,
+        key: `1w4ew1`,
+      },
+    ],
+    [`path`, { d: `M7 11V7a5 5 0 0 1 10 0v4`, key: `fwvmzm` }],
+  ]),
+  x = d(`minus`, [[`path`, { d: `M5 12h14`, key: `1ays0h` }]]),
+  S = d(`music-2`, [
+    [`circle`, { cx: `8`, cy: `18`, r: `4`, key: `1fc0mg` }],
+    [`path`, { d: `M12 18V2l7 4`, key: `g04rme` }],
+  ]),
+  C = d(`pause`, [
+    [
+      `rect`,
+      { x: `14`, y: `3`, width: `5`, height: `18`, rx: `1`, key: `kaeet6` },
+    ],
+    [
+      `rect`,
+      { x: `5`, y: `3`, width: `5`, height: `18`, rx: `1`, key: `1wsw3u` },
+    ],
+  ]),
+  w = d(`play`, [
+    [
+      `path`,
+      {
+        d: `M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z`,
+        key: `10ikf1`,
+      },
+    ],
+  ]),
+  T = d(`rotate-cw`, [
+    [
+      `path`,
+      { d: `M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8`, key: `1p45f6` },
+    ],
+    [`path`, { d: `M21 3v5h-5`, key: `1q7to0` }],
+  ]),
+  te = d(`search`, [
+    [`path`, { d: `m21 21-4.34-4.34`, key: `14j7rj` }],
+    [`circle`, { cx: `11`, cy: `11`, r: `8`, key: `4ej97u` }],
+  ]),
+  E = d(`square`, [
+    [
+      `rect`,
+      { width: `18`, height: `18`, x: `3`, y: `3`, rx: `2`, key: `afitv7` },
+    ],
+  ]),
+  D = d(`upload`, [
+    [`path`, { d: `M12 3v12`, key: `1x0j5s` }],
+    [`path`, { d: `m17 8-5-5-5 5`, key: `7q97r8` }],
+    [`path`, { d: `M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4`, key: `ih7n3h` }],
+  ]),
+  O = d(`video`, [
+    [
+      `path`,
+      {
+        d: `m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5`,
+        key: `ftymec`,
+      },
+    ],
+    [
+      `rect`,
+      { x: `2`, y: `6`, width: `14`, height: `12`, rx: `2`, key: `158x01` },
+    ],
+  ]),
+  k = d(`x`, [
+    [`path`, { d: `M18 6 6 18`, key: `1bl5f8` }],
+    [`path`, { d: `m6 6 12 12`, key: `d8bk6v` }],
+  ]),
+  A = n(),
+  j = [
+    { id: `drops`, name: `Drops`, count: 11, parent: void 0 },
+    { id: `2017`, name: `2017`, count: 1, parent: `drops` },
+    { id: `2018`, name: `2018`, count: 9, parent: `drops` },
+    { id: `2020`, name: `2020`, count: 4, parent: `drops` },
+    { id: `demos`, name: `Demos`, count: 8 },
+    { id: `live`, name: `Live`, count: 1 },
+    { id: `memos`, name: `Voice memos`, count: 4 },
+    { id: `locations`, name: `Locations`, count: 1 },
+    {
+      id: `wolverhampton`,
+      name: `Wolverhampton`,
+      count: 8,
+      parent: `locations`,
+    },
+    { id: `home`, name: `Home`, count: 0, parent: `wolverhampton` },
+    {
+      id: `first-studio`,
+      name: `First Studio`,
+      count: 0,
+      parent: `wolverhampton`,
+    },
+    {
+      id: `city-centre`,
+      name: `City Centre`,
+      count: 0,
+      parent: `wolverhampton`,
+    },
+    { id: `ring-road`, name: `Ring Road`, count: 0, parent: `wolverhampton` },
+    {
+      id: `train-station`,
+      name: `Train Station`,
+      count: 0,
+      parent: `wolverhampton`,
+    },
+    {
+      id: `bus-station`,
+      name: `Bus Station`,
+      count: 0,
+      parent: `wolverhampton`,
+    },
+    { id: `west-park`, name: `West Park`, count: 0, parent: `wolverhampton` },
+    { id: `canal`, name: `Canal`, count: 0, parent: `wolverhampton` },
+    { id: `ideas`, name: `Ideas`, count: 4 },
+    { id: `colour-palette`, name: `Colour Palette`, count: 0, parent: `ideas` },
+    { id: `photography`, name: `Photography`, count: 0, parent: `ideas` },
+    { id: `books`, name: `Books`, count: 0, parent: `ideas` },
+    { id: `album-concepts`, name: `Album Concepts`, count: 0, parent: `ideas` },
+    { id: `sessions`, name: `Sessions`, count: 5 },
+    { id: `studio-001`, name: `Studio_001`, count: 0, parent: `sessions` },
+    { id: `studio-002`, name: `Studio_002`, count: 0, parent: `sessions` },
+    { id: `mixes`, name: `Mixes`, count: 0, parent: `sessions` },
+    { id: `photos`, name: `Photos`, count: 0, parent: `sessions` },
+    { id: `session-videos`, name: `Videos`, count: 0, parent: `sessions` },
+    { id: `journals`, name: `Journals`, count: 2 },
+    { id: `archive`, name: `Archive`, count: 12 },
+    { id: `videos`, name: `Videos`, count: 2, parent: `archive` },
+  ],
+  M = [
+    {
+      id: `01`,
+      title: `midnight-reverb.wav`,
+      folder: `drops`,
+      kind: `Single`,
+      size: `38.2 MB`,
+      length: `3:42`,
+      modified: `2h ago`,
+      locked: !1,
+      media: `audio`,
+    },
+    {
+      id: `03`,
+      title: `slow-bleed_rework.wav`,
+      folder: `drops`,
+      kind: `Alt mix`,
+      size: `41.0 MB`,
+      length: `4:15`,
+      modified: `3d ago`,
+      locked: !1,
+      media: `audio`,
+    },
+    {
+      id: `04`,
+      title: `paper-cathedrals_live.wav`,
+      folder: `live`,
+      kind: `Live`,
+      size: `52.7 MB`,
+      length: `5:03`,
+      modified: `Fri`,
+      locked: !0,
+      media: `audio`,
+    },
+    {
+      id: `05`,
+      title: `untitled-III.m4a`,
+      folder: `memos`,
+      kind: `Voice memo`,
+      size: `8.4 MB`,
+      length: `1:47`,
+      modified: `Sun`,
+      locked: !0,
+      media: `audio`,
+    },
+    {
+      id: `06`,
+      title: `feral-season_b-side.wav`,
+      folder: `drops`,
+      kind: `B-side`,
+      size: `35.1 MB`,
+      length: `3:29`,
+      modified: `May 12`,
+      locked: !0,
+      media: `audio`,
+    },
+    {
+      id: `j01`,
+      title: `2026-07-04.txt`,
+      folder: `journals`,
+      kind: `Text file`,
+      size: `2.1 KB`,
+      length: `—`,
+      modified: `Jul 4`,
+      locked: !1,
+      media: `text`,
+      text: `2026-07-04
+
+New folder structure for the vault. Keep locations, sessions, ideas, and journals separate so the archive feels easy to explore.`,
+    },
+    {
+      id: `j02`,
+      title: `2026-06-28.txt`,
+      folder: `journals`,
+      kind: `Text file`,
+      size: `1.7 KB`,
+      length: `—`,
+      modified: `Jun 28`,
+      locked: !1,
+      media: `text`,
+      text: `2026-06-28
+
+Collect references for the next phase: rooms, routes, studio photos, book notes, and early album concepts.`,
+    },
+    {
+      id: `v01`,
+      title: `Studio session`,
+      folder: `videos`,
+      kind: `Clip`,
+      size: `18.4 MB`,
+      length: `0:32`,
+      modified: `Apr 2`,
+      locked: !1,
+      media: `video`,
+      src: `https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4`,
+    },
+    {
+      id: `v02`,
+      title: `Tour diary · ep. 01`,
+      folder: `videos`,
+      kind: `Diary`,
+      size: `64.1 MB`,
+      length: `2:14`,
+      modified: `Mar 18`,
+      locked: !1,
+      media: `video`,
+      src: `https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4`,
+    },
+    {
+      id: `u-i-w-1`,
+      title: `I wanna know.mp3`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `3.2 MB`,
+      length: `3:12`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/I%20wanna%20know.mp3`,
+    },
+    {
+      id: `u-bout-time`,
+      title: `Bout Time.wav`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `4.1 MB`,
+      length: `3:24`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Bout%20Time.wav`,
+    },
+    {
+      id: `u-heart-went-cold`,
+      title: `Heart went cold.wav`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `4.5 MB`,
+      length: `3:31`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Heart%20went%20cold.wav`,
+    },
+    {
+      id: `u-long-way-home`,
+      title: `Long way home.wav`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `5.0 MB`,
+      length: `3:58`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Long%20way%20home.wav`,
+    },
+    {
+      id: `u-closer-to-the-truth`,
+      title: `Closer to the truth .wav`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `4.3 MB`,
+      length: `3:45`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Closer%20to%20the%20truth%20.wav`,
+    },
+    {
+      id: `u-piece-of-your-love`,
+      title: `Piece of your love .mp3`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `3.8 MB`,
+      length: `3:12`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Piece%20of%20your%20love%20.mp3`,
+    },
+    {
+      id: `u-tell-me-how-v2`,
+      title: `tell me how v2.mp3`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `3.5 MB`,
+      length: `3:08`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/tell%20me%20how%20v2.mp3`,
+    },
+    {
+      id: `u-back-at-me`,
+      title: `back at me .mp3`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `3.6 MB`,
+      length: `3:25`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/back%20at%20me%20.mp3`,
+    },
+    {
+      id: `u-heartbeat-racing`,
+      title: `Heartbeat racing.mp3`,
+      folder: `demos`,
+      kind: `Demo`,
+      size: `3.9 MB`,
+      length: `3:31`,
+      modified: `just now`,
+      locked: !1,
+      media: `audio`,
+      src: `/uploads/Heartbeat%20racing.mp3`,
+    },
+    {
+      id: `2017-img-1`,
+      title: `Screenshot 2026-07-04 at 9.42.46 PM.png`,
+      folder: `2017`,
+      kind: `Photo`,
+      size: `405.2 KB`,
+      length: `—`,
+      modified: `2017`,
+      locked: !1,
+      media: `image`,
+      src: `/2017/Screenshot%202026-07-04%20at%209.42.46%E2%80%AFPM.png`,
+    },
+    {
+      id: `2018-img-1`,
+      title: `Footasylum Performance 2.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Footasylum%20Performance%202.png`,
+    },
+    {
+      id: `2018-img-2`,
+      title: `Footasylum Performance.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Footasylum%20Performance.png`,
+    },
+    {
+      id: `2018-img-3`,
+      title: `IMG_1217.PNG`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `633.8 KB`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/IMG_1217.PNG`,
+    },
+    {
+      id: `2018-img-4`,
+      title: `Rhearsal.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Rhearsal.png`,
+    },
+    {
+      id: `2018-img-5`,
+      title: `Screenshot 2026-07-04 at 9.41.08 PM.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Screenshot%202026-07-04%20at%209.41.08%E2%80%AFPM.png`,
+    },
+    {
+      id: `2018-img-6`,
+      title: `Screenshot 2026-07-04 at 9.41.48 PM.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Screenshot%202026-07-04%20at%209.41.48%E2%80%AFPM.png`,
+    },
+    {
+      id: `2018-img-7`,
+      title: `Screenshot 2026-07-04 at 9.42.31 PM.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/Screenshot%202026-07-04%20at%209.42.31%E2%80%AFPM.png`,
+    },
+    {
+      id: `2018-img-8`,
+      title: `rocket kid tracklist.png`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/rocket%20kid%20tracklist.png`,
+    },
+    {
+      id: `2018-img-9`,
+      title: `rocket kid.jpg`,
+      folder: `2018`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2018`,
+      locked: !1,
+      media: `image`,
+      src: `/2018/rocket%20kid.jpg`,
+    },
+    {
+      id: `2020-img-1`,
+      title: `Screenshot 2026-07-04 at 9.45.20 PM.png`,
+      folder: `2020`,
+      kind: `Photo`,
+      size: `1.8 MB`,
+      length: `—`,
+      modified: `2020`,
+      locked: !1,
+      media: `image`,
+      src: `/2020/Screenshot%202026-07-04%20at%209.45.20%E2%80%AFPM.png`,
+    },
+    {
+      id: `2020-img-2`,
+      title: `Screenshot 2026-07-04 at 10.33.27 PM.png`,
+      folder: `2020`,
+      kind: `Photo`,
+      size: `2.7 MB`,
+      length: `—`,
+      modified: `2020`,
+      locked: !1,
+      media: `image`,
+      src: `/2020/Screenshot%202026-07-04%20at%2010.33.27%E2%80%AFPM.png`,
+    },
+    {
+      id: `2020-img-3`,
+      title: `Screenshot 2026-07-04 at 10.36.22 PM.png`,
+      folder: `2020`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2020`,
+      locked: !1,
+      media: `image`,
+      src: `/2020/Screenshot%202026-07-04%20at%2010.36.22%E2%80%AFPM.png`,
+    },
+    {
+      id: `2020-img-4`,
+      title: `Screenshot 2026-07-04 at 11.00.50 PM.png`,
+      folder: `2020`,
+      kind: `Photo`,
+      size: `—`,
+      length: `—`,
+      modified: `2020`,
+      locked: !1,
+      media: `image`,
+      src: `/2020/Screenshot%202026-07-04%20at%2011.00.50%E2%80%AFPM.png`,
+    },
+  ];
+function N(e) {
+  return e < 1024 * 1024
+    ? `${(e / 1024).toFixed(1)} KB`
+    : `${(e / (1024 * 1024)).toFixed(1)} MB`;
+}
+function P(e) {
+  return e.title
+    .replace(/\.[^.]+$/, ``)
+    .replace(/[-_]+/g, ` `)
+    .replace(/\b\w/g, (e) => e.toUpperCase());
+}
+function ne(e) {
+  let t = [],
+    n = j.find((t) => t.id === e);
+  for (; n;)
+    (t.unshift(n.name),
+      (n = n.parent ? j.find((e) => e.id === n.parent) : void 0));
+  return t;
+}
+function re({ item: e, isSelected: t, isActive: n, onOpen: r }) {
+  return (0, A.jsxs)(`button`, {
+    type: `button`,
+    onClick: () => r(e),
+    className: `group relative aspect-video overflow-hidden rounded-sm border bg-muted/40 text-left transition ${t || n ? `border-accent ring-2 ring-accent/25` : `border-border hover:border-foreground/25 hover:shadow-md`}`,
+    children: [
+      e.src &&
+        !e.locked &&
+        (0, A.jsx)(`video`, {
+          src: e.src,
+          preload: `metadata`,
+          muted: !0,
+          playsInline: !0,
+          className: `absolute inset-0 h-full w-full object-cover`,
+          onLoadedMetadata: (e) => {
+            e.currentTarget.currentTime = Math.min(
+              1,
+              e.currentTarget.duration * 0.05,
+            );
+          },
+        }),
+      (0, A.jsx)(`div`, {
+        className: `absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5`,
+      }),
+      (0, A.jsx)(`div`, {
+        className: `absolute inset-0 grid place-items-center`,
+        children: e.locked
+          ? (0, A.jsx)(`span`, {
+              className: `grid place-items-center h-12 w-12 rounded-full bg-black/50 text-white backdrop-blur-sm`,
+              children: (0, A.jsx)(b, {
+                className: `h-5 w-5`,
+                strokeWidth: 1.75,
+              }),
+            })
+          : (0, A.jsx)(`span`, {
+              className: `grid place-items-center h-12 w-12 rounded-full bg-white/95 text-foreground shadow-lg transition group-hover:scale-105`,
+              children: (0, A.jsx)(w, {
+                className: `h-5 w-5 fill-current ml-0.5`,
+              }),
+            }),
+      }),
+      (0, A.jsx)(`span`, {
+        className: `absolute top-2 right-2 rounded-sm bg-black/55 px-1.5 py-0.5 text-[10px] text-white text-mono tabular-nums`,
+        children: e.locked ? `locked` : e.length,
+      }),
+      (0, A.jsxs)(`div`, {
+        className: `absolute inset-x-0 bottom-0 p-3`,
+        children: [
+          (0, A.jsx)(`p`, {
+            className: `truncate text-sm font-medium text-white`,
+            children: P(e),
+          }),
+          (0, A.jsx)(`p`, {
+            className: `mt-0.5 text-[11px] text-white/70`,
+            children: e.kind,
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function F() {
+  let [e, t] = (0, l.useState)(`drops`),
+    [n, r] = (0, l.useState)(`01`),
+    [i, a] = (0, l.useState)(null),
+    [o, s] = (0, l.useState)(null),
+    c = (0, l.useRef)(null),
+    [u, d] = (0, l.useState)([]),
+    [F, I] = (0, l.useState)(``),
+    [L, R] = (0, l.useState)(!1),
+    z = (0, l.useRef)(null),
+    B = j.find((t) => t.id === e),
+    V = [...M, ...u],
+    H = V.filter((t) => t.folder === e),
+    U = H.filter((e) => e.media === `image`),
+    W = H.filter((e) => e.media !== `image`),
+    G = ne(e),
+    K = B.parent ? j.find((e) => e.id === B.parent) : void 0,
+    q = n ? V.find((e) => e.id === n) : void 0,
+    J = o ? V.find((e) => e.id === o) : void 0,
+    Y = e === `videos`,
+    X = (e) => {
+      (t(e), r(null), a(null), s(null));
+    },
+    Z = (e) => {
+      e.locked || (r(e.id), s(e.id), a(null));
+    },
+    Q = (e) => {
+      if (!e.locked) {
+        if ((r(e.id), e.media === `video`)) {
+          Z(e);
+          return;
+        }
+        if (e.media === `text`) {
+          (s(null), a(null));
+          return;
+        }
+        (s(null), a((t) => (t === e.id ? null : e.id)));
+      }
+    };
+  (0, l.useEffect)(() => {
+    let e = c.current;
+    if (e) {
+      if (i) {
+        let t = V.find((e) => e.id === i);
+        t &&
+          t.src &&
+          (e.src !== t.src && (e.src = t.src), e.play().catch(() => {}));
+      } else {
+        e.pause();
+        try {
+          e.currentTime = 0;
+        } catch {}
+      }
+      e.onended = () => a(null);
+    }
+  }, [i, V]);
+  let ie = (e) => {
+      let n = e.target.files?.[0];
+      if (!n) return;
+      let i = `upload-${Date.now()}`,
+        o = {
+          id: i,
+          title: n.name,
+          folder: `videos`,
+          kind: `Upload`,
+          size: N(n.size),
+          length: `—:—`,
+          modified: `just now`,
+          locked: !1,
+          media: `video`,
+          src: URL.createObjectURL(n),
+        };
+      (d((e) => [...e, o]),
+        t(`videos`),
+        r(i),
+        s(i),
+        a(null),
+        (e.target.value = ``));
+    },
+    ae = (e) => {
+      (e.preventDefault(), F.includes(`@`) && R(!0));
+    },
+    oe = (e) =>
+      e.locked
+        ? (0, A.jsx)(b, { className: `h-3.5 w-3.5`, strokeWidth: 1.75 })
+        : e.media === `video`
+          ? (0, A.jsx)(O, { className: `h-3.5 w-3.5`, strokeWidth: 1.75 })
+          : e.media === `image`
+            ? (0, A.jsx)(v, { className: `h-3.5 w-3.5`, strokeWidth: 1.75 })
+            : e.media === `text`
+              ? (0, A.jsx)(g, { className: `h-3.5 w-3.5`, strokeWidth: 1.75 })
+              : (0, A.jsx)(S, { className: `h-3.5 w-3.5`, strokeWidth: 1.75 }),
+    $ = (t, n = 0) =>
+      j
+        .filter((e) => e.parent === t)
+        .map((t) => {
+          let r = t.id === e,
+            i = t.id === `videos` ? t.count + u.length : t.count;
+          return (0, A.jsxs)(
+            `div`,
+            {
+              children: [
+                (0, A.jsxs)(`button`, {
+                  onClick: () => X(t.id),
+                  className: `w-full flex items-center gap-2 py-1.5 pr-3 text-sm text-left transition ${r ? `bg-selected text-selected-foreground` : `hover:bg-row-hover text-foreground/80`}`,
+                  style: { paddingLeft: `${12 + n * 16}px` },
+                  children: [
+                    r
+                      ? (0, A.jsx)(_, {
+                          className: `h-3.5 w-3.5 shrink-0`,
+                          strokeWidth: 1.75,
+                        })
+                      : (0, A.jsx)(ee, {
+                          className: `h-3.5 w-3.5 shrink-0`,
+                          strokeWidth: 1.75,
+                        }),
+                    (0, A.jsx)(`span`, {
+                      className: `truncate`,
+                      children: t.name,
+                    }),
+                    (0, A.jsx)(`span`, {
+                      className: `ml-auto text-[10px] text-muted-foreground text-mono`,
+                      children: i,
+                    }),
+                  ],
+                }),
+                $(t.id, n + 1),
+              ],
+            },
+            t.id,
+          );
+        });
+  return (0, A.jsx)(`div`, {
+    className: `min-h-screen bg-background text-foreground`,
+    children: (0, A.jsxs)(`main`, {
+      className: `relative z-10 mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16`,
+      children: [
+        (0, A.jsxs)(`div`, {
+          className: `mb-6 flex items-center justify-between`,
+          children: [
+            (0, A.jsxs)(`div`, {
+              className: `flex items-center gap-2 text-sm`,
+              children: [
+                (0, A.jsx)(y, { className: `h-4 w-4`, strokeWidth: 1.5 }),
+                (0, A.jsx)(`span`, {
+                  className: `font-medium tracking-tight`,
+                  children: `Imram's World`,
+                }),
+                (0, A.jsx)(`span`, {
+                  className: `text-muted-foreground`,
+                  children: `/ You're early`,
+                }),
+              ],
+            }),
+            (0, A.jsx)(`div`, {
+              className: `flex items-center gap-4`,
+              children: (0, A.jsx)(`a`, {
+                href: `#join`,
+                className: `text-xs text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4`,
+                children: `Request access`,
+              }),
+            }),
+          ],
+        }),
+        (0, A.jsxs)(`section`, {
+          className: `surface-window overflow-hidden`,
+          children: [
+            (0, A.jsxs)(`div`, {
+              className: `surface-chrome flex items-center justify-between px-3 py-2`,
+              children: [
+                (0, A.jsxs)(`div`, {
+                  className: `flex items-center gap-2 text-[11px] text-muted-foreground text-mono`,
+                  children: [
+                    (0, A.jsx)(_, {
+                      className: `h-3.5 w-3.5`,
+                      strokeWidth: 1.75,
+                    }),
+                    `vault:\\\\`,
+                    G.map((e) => e.toLowerCase()).join(`\\`),
+                  ],
+                }),
+                (0, A.jsxs)(`div`, {
+                  className: `flex items-center gap-1.5`,
+                  children: [
+                    (0, A.jsx)(`button`, {
+                      "aria-label": `minimize`,
+                      className: `grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground`,
+                      children: (0, A.jsx)(x, { className: `h-3 w-3` }),
+                    }),
+                    (0, A.jsx)(`button`, {
+                      "aria-label": `maximize`,
+                      className: `grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground`,
+                      children: (0, A.jsx)(E, { className: `h-2.5 w-2.5` }),
+                    }),
+                    (0, A.jsx)(`button`, {
+                      "aria-label": `close`,
+                      className: `grid place-items-center h-5 w-5 rounded-sm hover:bg-destructive hover:text-destructive-foreground transition text-muted-foreground`,
+                      children: (0, A.jsx)(k, { className: `h-3 w-3` }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, A.jsxs)(`div`, {
+              className: `surface-chrome flex items-center gap-2 px-3 py-2`,
+              children: [
+                (0, A.jsxs)(`div`, {
+                  className: `flex items-center gap-0.5 text-muted-foreground`,
+                  children: [
+                    (0, A.jsx)(`button`, {
+                      className: `p-1 rounded-sm hover:bg-muted hover:text-foreground disabled:opacity-40`,
+                      disabled: !K,
+                      "aria-label": `back`,
+                      onClick: () => K && X(K.id),
+                      children: (0, A.jsx)(f, { className: `h-3.5 w-3.5` }),
+                    }),
+                    (0, A.jsx)(`button`, {
+                      className: `p-1 rounded-sm hover:bg-muted hover:text-foreground disabled:opacity-40`,
+                      disabled: !0,
+                      "aria-label": `forward`,
+                      children: (0, A.jsx)(p, { className: `h-3.5 w-3.5` }),
+                    }),
+                    (0, A.jsx)(`button`, {
+                      className: `p-1 rounded-sm hover:bg-muted hover:text-foreground`,
+                      "aria-label": `refresh`,
+                      children: (0, A.jsx)(T, { className: `h-3.5 w-3.5` }),
+                    }),
+                  ],
+                }),
+                (0, A.jsxs)(`div`, {
+                  className: `flex-1 flex items-center gap-1 text-xs text-mono bg-card border border-border rounded-sm px-2 py-1 min-w-0`,
+                  children: [
+                    (0, A.jsx)(`span`, {
+                      className: `text-muted-foreground shrink-0`,
+                      children: `Vault`,
+                    }),
+                    G.map((e) =>
+                      (0, A.jsxs)(
+                        `span`,
+                        {
+                          className: `flex items-center gap-1 min-w-0`,
+                          children: [
+                            (0, A.jsx)(m, {
+                              className: `h-3 w-3 text-muted-foreground shrink-0`,
+                            }),
+                            (0, A.jsx)(`span`, {
+                              className: `truncate`,
+                              children: e,
+                            }),
+                          ],
+                        },
+                        e,
+                      ),
+                    ),
+                  ],
+                }),
+                (0, A.jsxs)(`div`, {
+                  className: `hidden sm:flex items-center gap-1.5 text-xs text-mono bg-card border border-border rounded-sm px-2 py-1 w-48`,
+                  children: [
+                    (0, A.jsx)(te, {
+                      className: `h-3 w-3 text-muted-foreground`,
+                    }),
+                    (0, A.jsxs)(`span`, {
+                      className: `text-muted-foreground`,
+                      children: [`Search `, B.name.toLowerCase()],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, A.jsxs)(`div`, {
+              className: `grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr]`,
+              children: [
+                (0, A.jsxs)(`aside`, {
+                  className: `border-r border-border bg-chrome/40 py-2`,
+                  children: [
+                    (0, A.jsx)(`div`, {
+                      className: `px-3 pt-1 pb-2 text-[10px] uppercase tracking-[0.18em] text-muted-foreground`,
+                      children: `Folders`,
+                    }),
+                    (0, A.jsx)(`nav`, { children: $() }),
+                  ],
+                }),
+                (0, A.jsx)(`div`, {
+                  className: `min-w-0`,
+                  children: Y
+                    ? (0, A.jsxs)(`div`, {
+                        className: `min-w-0`,
+                        children: [
+                          J?.src &&
+                            (0, A.jsxs)(`div`, {
+                              className: `border-b border-border bg-card`,
+                              children: [
+                                (0, A.jsx)(
+                                  `video`,
+                                  {
+                                    src: J.src,
+                                    controls: !0,
+                                    autoPlay: !0,
+                                    playsInline: !0,
+                                    className: `aspect-video w-full bg-foreground/5 object-contain`,
+                                  },
+                                  J.src,
+                                ),
+                                (0, A.jsxs)(`div`, {
+                                  className: `flex items-center justify-between gap-3 px-4 py-3`,
+                                  children: [
+                                    (0, A.jsxs)(`div`, {
+                                      className: `min-w-0`,
+                                      children: [
+                                        (0, A.jsx)(`p`, {
+                                          className: `truncate text-sm font-medium`,
+                                          children: P(J),
+                                        }),
+                                        (0, A.jsxs)(`p`, {
+                                          className: `text-[11px] text-muted-foreground text-mono`,
+                                          children: [J.kind, ` · `, J.length],
+                                        }),
+                                      ],
+                                    }),
+                                    (0, A.jsx)(`button`, {
+                                      type: `button`,
+                                      onClick: () => s(null),
+                                      className: `shrink-0 text-[11px] text-muted-foreground hover:text-foreground transition underline underline-offset-4`,
+                                      children: `close`,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          (0, A.jsxs)(`div`, {
+                            className: `p-4`,
+                            children: [
+                              (0, A.jsxs)(`div`, {
+                                className: `grid grid-cols-1 sm:grid-cols-2 gap-3`,
+                                children: [
+                                  H.map((e) =>
+                                    (0, A.jsx)(
+                                      re,
+                                      {
+                                        item: e,
+                                        isSelected: n === e.id,
+                                        isActive: o === e.id,
+                                        onOpen: Z,
+                                      },
+                                      e.id,
+                                    ),
+                                  ),
+                                  (0, A.jsxs)(`button`, {
+                                    type: `button`,
+                                    onClick: () => z.current?.click(),
+                                    className: `group relative flex aspect-video flex-col items-center justify-center gap-2 rounded-sm border border-dashed border-border bg-chrome/30 text-muted-foreground transition hover:border-foreground/30 hover:bg-row-hover hover:text-foreground`,
+                                    children: [
+                                      (0, A.jsx)(`span`, {
+                                        className: `grid place-items-center h-10 w-10 rounded-full border border-border bg-card transition group-hover:border-foreground/30`,
+                                        children: (0, A.jsx)(D, {
+                                          className: `h-4 w-4`,
+                                          strokeWidth: 1.75,
+                                        }),
+                                      }),
+                                      (0, A.jsx)(`span`, {
+                                        className: `text-sm`,
+                                        children: `Add video`,
+                                      }),
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              (0, A.jsx)(`input`, {
+                                ref: z,
+                                type: `file`,
+                                accept: `video/*`,
+                                className: `hidden`,
+                                onChange: ie,
+                              }),
+                              H.length === 0 &&
+                                (0, A.jsx)(`p`, {
+                                  className: `mt-6 text-center text-sm text-muted-foreground`,
+                                  children: `No videos yet. Add one to get started.`,
+                                }),
+                            ],
+                          }),
+                        ],
+                      })
+                    : (0, A.jsxs)(A.Fragment, {
+                        children: [
+                          U.length > 0 &&
+                            (0, A.jsxs)(`div`, {
+                              className: `p-4`,
+                              children: [
+                                (0, A.jsxs)(`div`, {
+                                  className: `mb-3 flex items-center justify-between gap-3`,
+                                  children: [
+                                    (0, A.jsxs)(`div`, {
+                                      children: [
+                                        (0, A.jsx)(`div`, {
+                                          className: `text-[10px] uppercase tracking-[0.18em] text-muted-foreground`,
+                                          children: `photo previews`,
+                                        }),
+                                        (0, A.jsx)(`h2`, {
+                                          className: `text-sm font-medium text-foreground`,
+                                          children: B.name,
+                                        }),
+                                      ],
+                                    }),
+                                    (0, A.jsxs)(`span`, {
+                                      className: `text-xs text-muted-foreground`,
+                                      children: [
+                                        U.length,
+                                        ` photo`,
+                                        U.length === 1 ? `` : `s`,
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                                (0, A.jsx)(`div`, {
+                                  className: `grid gap-3 sm:grid-cols-2 lg:grid-cols-3`,
+                                  children: U.map((e) =>
+                                    (0, A.jsxs)(
+                                      `button`,
+                                      {
+                                        type: `button`,
+                                        onClick: () => r(e.id),
+                                        className: `group overflow-hidden rounded-sm border border-border bg-card text-left transition hover:shadow-lg `,
+                                        children: [
+                                          (0, A.jsx)(`div`, {
+                                            className: `relative overflow-hidden bg-slate-950/5 h-48`,
+                                            children: (0, A.jsx)(`img`, {
+                                              src: e.src,
+                                              alt: e.title,
+                                              className: `h-full w-full object-cover transition duration-300 group-hover:scale-105`,
+                                            }),
+                                          }),
+                                          (0, A.jsx)(`div`, {
+                                            className: `space-y-1 p-3`,
+                                            children: (0, A.jsx)(`div`, {
+                                              className: `text-[11px] text-muted-foreground`,
+                                              children: e.kind,
+                                            }),
+                                          }),
+                                        ],
+                                      },
+                                      e.id,
+                                    ),
+                                  ),
+                                }),
+                              ],
+                            }),
+                          (0, A.jsxs)(`div`, {
+                            className: `hidden md:grid grid-cols-[1fr_90px_70px_80px] gap-4 px-4 py-2 border-b border-border text-[10px] uppercase tracking-[0.18em] text-muted-foreground bg-chrome/50`,
+                            children: [
+                              (0, A.jsx)(`div`, { children: `Name` }),
+                              (0, A.jsx)(`div`, { children: `Type` }),
+                              (0, A.jsx)(`div`, {
+                                className: `text-right`,
+                                children: `Length`,
+                              }),
+                              (0, A.jsx)(`div`, {
+                                className: `text-right`,
+                                children: `Modified`,
+                              }),
+                            ],
+                          }),
+                          (0, A.jsxs)(`ul`, {
+                            className: `divide-y divide-border`,
+                            children: [
+                              W.map((e) => {
+                                let t = n === e.id,
+                                  a = i === e.id;
+                                return (0, A.jsx)(
+                                  `li`,
+                                  {
+                                    children: (0, A.jsxs)(`button`, {
+                                      onClick: () => r(e.id),
+                                      onDoubleClick: () => Q(e),
+                                      className: `w-full grid grid-cols-[24px_1fr_auto] md:grid-cols-[24px_1fr_90px_70px_80px] gap-3 md:gap-4 items-center px-4 py-2.5 text-left transition ${t ? `bg-selected` : `hover:bg-row-hover`} ${e.locked ? `text-muted-foreground` : ``}`,
+                                      children: [
+                                        (0, A.jsx)(`span`, {
+                                          className: `grid place-items-center`,
+                                          children: oe(e),
+                                        }),
+                                        (0, A.jsxs)(`span`, {
+                                          className: `min-w-0 flex items-center gap-2`,
+                                          children: [
+                                            (0, A.jsx)(`button`, {
+                                              type: `button`,
+                                              onClick: (t) => {
+                                                (t.stopPropagation(),
+                                                  !e.locked && Q(e));
+                                              },
+                                              "aria-label": a
+                                                ? `pause`
+                                                : `play`,
+                                              className: `grid place-items-center h-7 w-7 rounded-sm ${e.locked ? `border-border text-muted-foreground` : `border-border hover:bg-foreground hover:text-background transition`}`,
+                                              children: a
+                                                ? (0, A.jsx)(C, {
+                                                    className: `h-3 w-3 fill-current`,
+                                                  })
+                                                : (0, A.jsx)(w, {
+                                                    className: `h-3 w-3 fill-current ml-px`,
+                                                  }),
+                                            }),
+                                            (0, A.jsx)(`span`, {
+                                              className: `text-mono text-sm truncate`,
+                                              children: e.title,
+                                            }),
+                                            e.folder === `demos` &&
+                                              e.media === `audio` &&
+                                              e.src &&
+                                              (0, A.jsx)(`a`, {
+                                                href: e.src,
+                                                download: !0,
+                                                className: `inline-flex h-7 w-7 items-center justify-center rounded-sm border border-border text-muted-foreground hover:bg-foreground hover:text-background transition`,
+                                                "aria-label": `Download ${e.title}`,
+                                                children: (0, A.jsx)(h, {
+                                                  className: `h-3 w-3`,
+                                                }),
+                                              }),
+                                            a &&
+                                              (0, A.jsxs)(`span`, {
+                                                className: `inline-flex items-center gap-1 text-[10px] uppercase tracking-[0.15em] text-accent`,
+                                                children: [
+                                                  (0, A.jsx)(`span`, {
+                                                    className: `h-1.5 w-1.5 rounded-full bg-accent`,
+                                                  }),
+                                                  `playing`,
+                                                ],
+                                              }),
+                                          ],
+                                        }),
+                                        (0, A.jsx)(`span`, {
+                                          className: `hidden md:block text-xs text-muted-foreground truncate`,
+                                          children: e.kind,
+                                        }),
+                                        (0, A.jsx)(`span`, {
+                                          className: `text-mono text-xs text-muted-foreground text-right tabular-nums`,
+                                          children: e.locked ? `—:—` : e.length,
+                                        }),
+                                        (0, A.jsx)(`span`, {
+                                          className: `hidden md:block text-xs text-muted-foreground text-right truncate`,
+                                          children: e.modified,
+                                        }),
+                                        (0, A.jsx)(`span`, {
+                                          role: `button`,
+                                          tabIndex: 0,
+                                          onClick: (t) => {
+                                            (t.stopPropagation(), Q(e));
+                                          },
+                                          className: `md:hidden justify-self-end grid place-items-center h-7 w-7 rounded-sm border ${e.locked ? `border-border text-muted-foreground` : `border-border hover:bg-foreground hover:text-background transition`}`,
+                                          "aria-label": e.locked
+                                            ? `locked`
+                                            : a
+                                              ? `pause`
+                                              : `play`,
+                                          children: e.locked
+                                            ? (0, A.jsx)(b, {
+                                                className: `h-3 w-3`,
+                                                strokeWidth: 1.75,
+                                              })
+                                            : a
+                                              ? (0, A.jsx)(C, {
+                                                  className: `h-3 w-3 fill-current`,
+                                                })
+                                              : (0, A.jsx)(w, {
+                                                  className: `h-3 w-3 fill-current ml-px`,
+                                                }),
+                                        }),
+                                      ],
+                                    }),
+                                  },
+                                  e.id,
+                                );
+                              }),
+                              H.length === 0 &&
+                                (0, A.jsx)(`li`, {
+                                  className: `px-4 py-16 text-center text-sm text-muted-foreground`,
+                                  children: `This folder is empty.`,
+                                }),
+                            ],
+                          }),
+                        ],
+                      }),
+                }),
+              ],
+            }),
+            (0, A.jsxs)(`div`, {
+              className: `surface-chrome border-t border-b-0 flex items-center justify-between px-3 py-1.5 text-[11px] text-muted-foreground text-mono`,
+              children: [
+                (0, A.jsxs)(`span`, {
+                  children: [
+                    H.length,
+                    ` item`,
+                    H.length === 1 ? `` : `s`,
+                    n ? ` · 1 selected` : ``,
+                  ],
+                }),
+                (0, A.jsxs)(`span`, {
+                  className: `hidden sm:inline`,
+                  children: [
+                    H.filter((e) => e.locked).length,
+                    ` locked ·`,
+                    ` `,
+                    Y ? `click a video to open` : `double-click to play`,
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+        (0, A.jsxs)(`section`, {
+          className: `mt-4 grid sm:grid-cols-[1fr_auto] gap-3 items-center surface-window px-4 py-3`,
+          children: [
+            (0, A.jsxs)(`div`, {
+              className: `flex items-center gap-3 min-w-0`,
+              children: [
+                (0, A.jsx)(`div`, {
+                  className: `grid place-items-center h-9 w-9 rounded-sm bg-muted shrink-0`,
+                  children: q?.locked
+                    ? (0, A.jsx)(b, {
+                        className: `h-4 w-4 text-muted-foreground`,
+                        strokeWidth: 1.75,
+                      })
+                    : q?.media === `video`
+                      ? (0, A.jsx)(O, {
+                          className: `h-4 w-4`,
+                          strokeWidth: 1.75,
+                        })
+                      : q?.media === `text`
+                        ? (0, A.jsx)(g, {
+                            className: `h-4 w-4`,
+                            strokeWidth: 1.75,
+                          })
+                        : (0, A.jsx)(S, {
+                            className: `h-4 w-4`,
+                            strokeWidth: 1.75,
+                          }),
+                }),
+                (0, A.jsxs)(`div`, {
+                  className: `min-w-0`,
+                  children: [
+                    (0, A.jsx)(`div`, {
+                      className: `text-mono text-sm truncate`,
+                      children: q
+                        ? q.media === `video`
+                          ? P(q)
+                          : q.title
+                        : `no file selected`,
+                    }),
+                    (0, A.jsx)(`div`, {
+                      className: `text-[11px] text-muted-foreground text-mono`,
+                      children: q
+                        ? `${q.kind} · ${q.size}`
+                        : `select a track above`,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, A.jsx)(`div`, {
+              className: `text-[11px] text-muted-foreground text-mono sm:text-right`,
+              children: `properties`,
+            }),
+          ],
+        }),
+        (0, A.jsx)(`audio`, {
+          ref: (e) => (c.current = e),
+          style: { display: `none` },
+        }),
+        q?.media === `text` &&
+          (0, A.jsxs)(`section`, {
+            className: `mt-4 surface-window p-4`,
+            children: [
+              (0, A.jsxs)(`div`, {
+                className: `mb-3 flex items-center justify-between gap-3`,
+                children: [
+                  (0, A.jsxs)(`div`, {
+                    className: `min-w-0`,
+                    children: [
+                      (0, A.jsx)(`div`, {
+                        className: `text-[10px] uppercase tracking-[0.18em] text-muted-foreground`,
+                        children: `text.preview`,
+                      }),
+                      (0, A.jsx)(`h2`, {
+                        className: `mt-1 truncate text-sm font-medium text-mono`,
+                        children: q.title,
+                      }),
+                    ],
+                  }),
+                  (0, A.jsx)(g, {
+                    className: `h-4 w-4 shrink-0 text-muted-foreground`,
+                    strokeWidth: 1.75,
+                  }),
+                ],
+              }),
+              (0, A.jsx)(`pre`, {
+                className: `whitespace-pre-wrap rounded-sm border border-border bg-input p-3 text-sm leading-relaxed text-foreground text-mono`,
+                children: q.text,
+              }),
+            ],
+          }),
+        (0, A.jsxs)(`section`, {
+          id: `join`,
+          className: `mt-6 surface-window p-6 sm:p-8`,
+          children: [
+            (0, A.jsx)(`div`, {
+              className: `text-[10px] uppercase tracking-[0.18em] text-muted-foreground mb-3`,
+              children: `access.request`,
+            }),
+            (0, A.jsxs)(`div`, {
+              className: `grid md:grid-cols-[1fr_auto] gap-6 items-end`,
+              children: [
+                (0, A.jsxs)(`div`, {
+                  children: [
+                    (0, A.jsx)(`h3`, {
+                      className: `text-xl sm:text-2xl font-medium tracking-tight`,
+                      children: `Request a key.`,
+                    }),
+                    (0, A.jsx)(`p`, {
+                      className: `mt-2 text-sm text-muted-foreground max-w-md`,
+                      children: `Drop your email. I'll send the code that unlocks the folder, plus a heads-up before every new drop.`,
+                    }),
+                  ],
+                }),
+                L
+                  ? (0, A.jsx)(`div`, {
+                      className: `text-sm text-mono text-foreground border border-border rounded-sm px-4 py-3 bg-selected`,
+                      children: `→ key dispatched. check your inbox.`,
+                    })
+                  : (0, A.jsxs)(`form`, {
+                      onSubmit: ae,
+                      className: `flex gap-2 w-full md:w-auto`,
+                      children: [
+                        (0, A.jsx)(`input`, {
+                          type: `email`,
+                          required: !0,
+                          value: F,
+                          onChange: (e) => I(e.target.value),
+                          placeholder: `you@somewhere.com`,
+                          className: `flex-1 md:w-64 text-mono text-sm bg-input border border-border rounded-sm px-3 py-2 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition`,
+                        }),
+                        (0, A.jsx)(`button`, {
+                          type: `submit`,
+                          className: `text-sm bg-foreground text-background rounded-sm px-4 py-2 hover:opacity-90 transition`,
+                          children: `Get key`,
+                        }),
+                      ],
+                    }),
+              ],
+            }),
+          ],
+        }),
+        (0, A.jsxs)(`footer`, {
+          className: `mt-10 pb-4 flex items-center justify-between text-[11px] text-mono text-muted-foreground`,
+          children: [
+            (0, A.jsx)(`span`, { children: `vault.exe · v0.7` }),
+            (0, A.jsxs)(`span`, {
+              children: [`© `, new Date().getFullYear(), ` · key holders only`],
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
+export { F as component };

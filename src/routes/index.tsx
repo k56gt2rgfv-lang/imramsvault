@@ -70,10 +70,20 @@ const FOLDERS: VaultFolder[] = [
   { id: "locations", name: "Locations", count: 1 },
   { id: "wolverhampton", name: "Wolverhampton", count: 8, parent: "locations" },
   { id: "home", name: "Home", count: 0, parent: "wolverhampton" },
-  { id: "first-studio", name: "First Studio", count: 0, parent: "wolverhampton" },
+  {
+    id: "first-studio",
+    name: "First Studio",
+    count: 0,
+    parent: "wolverhampton",
+  },
   { id: "city-centre", name: "City Centre", count: 0, parent: "wolverhampton" },
   { id: "ring-road", name: "Ring Road", count: 0, parent: "wolverhampton" },
-  { id: "train-station", name: "Train Station", count: 0, parent: "wolverhampton" },
+  {
+    id: "train-station",
+    name: "Train Station",
+    count: 0,
+    parent: "wolverhampton",
+  },
   { id: "bus-station", name: "Bus Station", count: 0, parent: "wolverhampton" },
   { id: "west-park", name: "West Park", count: 0, parent: "wolverhampton" },
   { id: "canal", name: "Canal", count: 0, parent: "wolverhampton" },
@@ -94,11 +104,61 @@ const FOLDERS: VaultFolder[] = [
 ];
 
 const TRACKS: VaultItem[] = [
-  { id: "01", title: "midnight-reverb.wav", folder: "drops", kind: "Single", size: "38.2 MB", length: "3:42", modified: "2h ago", locked: false, media: "audio" },
-  { id: "03", title: "slow-bleed_rework.wav", folder: "drops", kind: "Alt mix", size: "41.0 MB", length: "4:15", modified: "3d ago", locked: false, media: "audio" },
-  { id: "04", title: "paper-cathedrals_live.wav", folder: "live", kind: "Live", size: "52.7 MB", length: "5:03", modified: "Fri", locked: true, media: "audio" },
-  { id: "05", title: "untitled-III.m4a", folder: "memos", kind: "Voice memo", size: "8.4 MB", length: "1:47", modified: "Sun", locked: true, media: "audio" },
-  { id: "06", title: "feral-season_b-side.wav", folder: "drops", kind: "B-side", size: "35.1 MB", length: "3:29", modified: "May 12", locked: true, media: "audio" },
+  {
+    id: "01",
+    title: "midnight-reverb.wav",
+    folder: "drops",
+    kind: "Single",
+    size: "38.2 MB",
+    length: "3:42",
+    modified: "2h ago",
+    locked: false,
+    media: "audio",
+  },
+  {
+    id: "03",
+    title: "slow-bleed_rework.wav",
+    folder: "drops",
+    kind: "Alt mix",
+    size: "41.0 MB",
+    length: "4:15",
+    modified: "3d ago",
+    locked: false,
+    media: "audio",
+  },
+  {
+    id: "04",
+    title: "paper-cathedrals_live.wav",
+    folder: "live",
+    kind: "Live",
+    size: "52.7 MB",
+    length: "5:03",
+    modified: "Fri",
+    locked: true,
+    media: "audio",
+  },
+  {
+    id: "05",
+    title: "untitled-III.m4a",
+    folder: "memos",
+    kind: "Voice memo",
+    size: "8.4 MB",
+    length: "1:47",
+    modified: "Sun",
+    locked: true,
+    media: "audio",
+  },
+  {
+    id: "06",
+    title: "feral-season_b-side.wav",
+    folder: "drops",
+    kind: "B-side",
+    size: "35.1 MB",
+    length: "3:29",
+    modified: "May 12",
+    locked: true,
+    media: "audio",
+  },
   {
     id: "j01",
     title: "2026-07-04.txt",
@@ -443,7 +503,9 @@ function folderPath(folderId: string) {
   let current = FOLDERS.find((f) => f.id === folderId);
   while (current) {
     parts.unshift(current.name);
-    current = current.parent ? FOLDERS.find((f) => f.id === current!.parent) : undefined;
+    current = current.parent
+      ? FOLDERS.find((f) => f.id === current!.parent)
+      : undefined;
   }
   return parts;
 }
@@ -477,7 +539,10 @@ function VideoThumbnailCard({
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
           onLoadedMetadata={(e) => {
-            e.currentTarget.currentTime = Math.min(1, e.currentTarget.duration * 0.05);
+            e.currentTarget.currentTime = Math.min(
+              1,
+              e.currentTarget.duration * 0.05,
+            );
           }}
         />
       )}
@@ -501,7 +566,9 @@ function VideoThumbnailCard({
       </span>
 
       <div className="absolute inset-x-0 bottom-0 p-3">
-        <p className="truncate text-sm font-medium text-white">{displayVideoTitle(item)}</p>
+        <p className="truncate text-sm font-medium text-white">
+          {displayVideoTitle(item)}
+        </p>
         <p className="mt-0.5 text-[11px] text-white/70">{item.kind}</p>
       </div>
     </button>
@@ -529,8 +596,12 @@ function VaultPage() {
   const parentFolder = currentFolder.parent
     ? FOLDERS.find((f) => f.id === currentFolder.parent)
     : undefined;
-  const selectedItem = selected ? allItems.find((t) => t.id === selected) : undefined;
-  const activeVideoItem = activeVideo ? allItems.find((t) => t.id === activeVideo) : undefined;
+  const selectedItem = selected
+    ? allItems.find((t) => t.id === selected)
+    : undefined;
+  const activeVideoItem = activeVideo
+    ? allItems.find((t) => t.id === activeVideo)
+    : undefined;
   const isVideosFolder = folder === "videos";
 
   const openFolder = (id: string) => {
@@ -616,9 +687,12 @@ function VaultPage() {
 
   const renderItemIcon = (item: VaultItem) => {
     if (item.locked) return <Lock className="h-3.5 w-3.5" strokeWidth={1.75} />;
-    if (item.media === "video") return <Video className="h-3.5 w-3.5" strokeWidth={1.75} />;
-    if (item.media === "image") return <Image className="h-3.5 w-3.5" strokeWidth={1.75} />;
-    if (item.media === "text") return <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />;
+    if (item.media === "video")
+      return <Video className="h-3.5 w-3.5" strokeWidth={1.75} />;
+    if (item.media === "image")
+      return <Image className="h-3.5 w-3.5" strokeWidth={1.75} />;
+    if (item.media === "text")
+      return <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />;
     return <Music2 className="h-3.5 w-3.5" strokeWidth={1.75} />;
   };
 
@@ -643,7 +717,9 @@ function VaultPage() {
               <Folder className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
             )}
             <span className="truncate">{f.name}</span>
-            <span className="ml-auto text-[10px] text-muted-foreground text-mono">{count}</span>
+            <span className="ml-auto text-[10px] text-muted-foreground text-mono">
+              {count}
+            </span>
           </button>
           {renderFolderTree(f.id, depth + 1)}
         </div>
@@ -679,13 +755,22 @@ function VaultPage() {
               vault:\\{path.map((part) => part.toLowerCase()).join("\\")}
             </div>
             <div className="flex items-center gap-1.5">
-              <button aria-label="minimize" className="grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground">
+              <button
+                aria-label="minimize"
+                className="grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground"
+              >
                 <Minus className="h-3 w-3" />
               </button>
-              <button aria-label="maximize" className="grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground">
+              <button
+                aria-label="maximize"
+                className="grid place-items-center h-5 w-5 rounded-sm hover:bg-muted transition text-muted-foreground"
+              >
                 <Square className="h-2.5 w-2.5" />
               </button>
-              <button aria-label="close" className="grid place-items-center h-5 w-5 rounded-sm hover:bg-destructive hover:text-destructive-foreground transition text-muted-foreground">
+              <button
+                aria-label="close"
+                className="grid place-items-center h-5 w-5 rounded-sm hover:bg-destructive hover:text-destructive-foreground transition text-muted-foreground"
+              >
                 <X className="h-3 w-3" />
               </button>
             </div>
@@ -702,10 +787,17 @@ function VaultPage() {
               >
                 <ArrowLeft className="h-3.5 w-3.5" />
               </button>
-              <button className="p-1 rounded-sm hover:bg-muted hover:text-foreground disabled:opacity-40" disabled aria-label="forward">
+              <button
+                className="p-1 rounded-sm hover:bg-muted hover:text-foreground disabled:opacity-40"
+                disabled
+                aria-label="forward"
+              >
                 <ArrowRight className="h-3.5 w-3.5" />
               </button>
-              <button className="p-1 rounded-sm hover:bg-muted hover:text-foreground" aria-label="refresh">
+              <button
+                className="p-1 rounded-sm hover:bg-muted hover:text-foreground"
+                aria-label="refresh"
+              >
                 <RotateCw className="h-3.5 w-3.5" />
               </button>
             </div>
@@ -723,7 +815,9 @@ function VaultPage() {
 
             <div className="hidden sm:flex items-center gap-1.5 text-xs text-mono bg-card border border-border rounded-sm px-2 py-1 w-48">
               <Search className="h-3 w-3 text-muted-foreground" />
-              <span className="text-muted-foreground">Search {currentFolder.name.toLowerCase()}</span>
+              <span className="text-muted-foreground">
+                Search {currentFolder.name.toLowerCase()}
+              </span>
             </div>
           </div>
 
@@ -802,7 +896,6 @@ function VaultPage() {
                       className="hidden"
                       onChange={handleVideoUpload}
                     />
-                    
 
                     {visible.length === 0 && (
                       <p className="mt-6 text-center text-sm text-muted-foreground">
@@ -820,11 +913,18 @@ function VaultPage() {
                           <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                             photo previews
                           </div>
-                          <h2 className="text-sm font-medium text-foreground">{currentFolder.name}</h2>
+                          <h2 className="text-sm font-medium text-foreground">
+                            {currentFolder.name}
+                          </h2>
                         </div>
-                        <span className="text-xs text-muted-foreground">{imageItems.length} photo{imageItems.length === 1 ? "" : "s"}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {imageItems.length} photo
+                          {imageItems.length === 1 ? "" : "s"}
+                        </span>
                       </div>
-                      <div className={`grid gap-3 ${isLargeImageFolder ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+                      <div
+                        className={`grid gap-3 ${isLargeImageFolder ? "grid-cols-1" : "sm:grid-cols-2 lg:grid-cols-3"}`}
+                      >
                         {imageItems.map((item) => (
                           <button
                             key={item.id}
@@ -834,7 +934,9 @@ function VaultPage() {
                               isLargeImageFolder ? "md:col-span-2" : ""
                             }`}
                           >
-                            <div className={`relative overflow-hidden bg-slate-950/5 ${isLargeImageFolder ? "h-[38rem]" : "h-48"}`}>
+                            <div
+                              className={`relative overflow-hidden bg-slate-950/5 ${isLargeImageFolder ? "h-[38rem]" : "h-48"}`}
+                            >
                               <img
                                 src={item.src}
                                 alt={item.title}
@@ -899,18 +1001,22 @@ function VaultPage() {
                                 )}
                               </button>
 
-                              <span className="text-mono text-sm truncate">{t.title}</span>
+                              <span className="text-mono text-sm truncate">
+                                {t.title}
+                              </span>
 
-                              {t.folder === "demos" && t.media === "audio" && t.src && (
-                                <a
-                                  href={t.src}
-                                  download
-                                  className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-border text-muted-foreground hover:bg-foreground hover:text-background transition"
-                                  aria-label={`Download ${t.title}`}
-                                >
-                                  <Download className="h-3 w-3" />
-                                </a>
-                              )}
+                              {t.folder === "demos" &&
+                                t.media === "audio" &&
+                                t.src && (
+                                  <a
+                                    href={t.src}
+                                    download
+                                    className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-border text-muted-foreground hover:bg-foreground hover:text-background transition"
+                                    aria-label={`Download ${t.title}`}
+                                  >
+                                    <Download className="h-3 w-3" />
+                                  </a>
+                                )}
 
                               {isPlaying && (
                                 <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-[0.15em] text-accent">
@@ -943,7 +1049,13 @@ function VaultPage() {
                                   ? "border-border text-muted-foreground"
                                   : "border-border hover:bg-foreground hover:text-background transition"
                               }`}
-                              aria-label={t.locked ? "locked" : isPlaying ? "pause" : "play"}
+                              aria-label={
+                                t.locked
+                                  ? "locked"
+                                  : isPlaying
+                                    ? "pause"
+                                    : "play"
+                              }
                             >
                               {t.locked ? (
                                 <Lock className="h-3 w-3" strokeWidth={1.75} />
@@ -977,7 +1089,9 @@ function VaultPage() {
             </span>
             <span className="hidden sm:inline">
               {visible.filter((t) => t.locked).length} locked ·{" "}
-              {isVideosFolder ? "click a video to open" : "double-click to play"}
+              {isVideosFolder
+                ? "click a video to open"
+                : "double-click to play"}
             </span>
           </div>
         </section>
@@ -987,7 +1101,10 @@ function VaultPage() {
           <div className="flex items-center gap-3 min-w-0">
             <div className="grid place-items-center h-9 w-9 rounded-sm bg-muted shrink-0">
               {selectedItem?.locked ? (
-                <Lock className="h-4 w-4 text-muted-foreground" strokeWidth={1.75} />
+                <Lock
+                  className="h-4 w-4 text-muted-foreground"
+                  strokeWidth={1.75}
+                />
               ) : selectedItem?.media === "video" ? (
                 <Video className="h-4 w-4" strokeWidth={1.75} />
               ) : selectedItem?.media === "text" ? (
@@ -1017,7 +1134,10 @@ function VaultPage() {
         </section>
 
         {/* Hidden audio element controlled by `playing` state */}
-        <audio ref={(el) => (audioRef.current = el)} style={{ display: "none" }} />
+        <audio
+          ref={(el) => (audioRef.current = el)}
+          style={{ display: "none" }}
+        />
 
         {selectedItem?.media === "text" && (
           <section className="mt-4 surface-window p-4">
@@ -1030,7 +1150,10 @@ function VaultPage() {
                   {selectedItem.title}
                 </h2>
               </div>
-              <FileText className="h-4 w-4 shrink-0 text-muted-foreground" strokeWidth={1.75} />
+              <FileText
+                className="h-4 w-4 shrink-0 text-muted-foreground"
+                strokeWidth={1.75}
+              />
             </div>
             <pre className="whitespace-pre-wrap rounded-sm border border-border bg-input p-3 text-sm leading-relaxed text-foreground text-mono">
               {selectedItem.text}
@@ -1061,7 +1184,10 @@ function VaultPage() {
                 → key dispatched. check your inbox.
               </div>
             ) : (
-              <form onSubmit={handleJoin} className="flex gap-2 w-full md:w-auto">
+              <form
+                onSubmit={handleJoin}
+                className="flex gap-2 w-full md:w-auto"
+              >
                 <input
                   type="email"
                   required
