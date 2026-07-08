@@ -40,53 +40,56 @@
 :root {
   --radius: 3px;
 
-    --background: #2d0d4a;
-    --foreground: #f8f6ff;
-    --card: #3e1a62;
-    --card-foreground: #f8f6ff;
-    --popover: #3e1a62;
-    --popover-foreground: #f8f6ff;
+  --background: #2d0d4a;
+  --foreground: #f8f6ff;
+  --card: #3e1a62;
+  --card-foreground: #f8f6ff;
+  --popover: #3e1a62;
+  --popover-foreground: #f8f6ff;
 
-    --chrome: #3b1770;        /* window chrome / toolbar */
-    --chrome-border: #7c3aed;
+  --chrome: #3b1770; /* window chrome / toolbar */
+  --chrome-border: #7c3aed;
 
-    --primary: #ede9fe;
-    --primary-foreground: #1f2937;
+  --primary: #ede9fe;
+  --primary-foreground: #1f2937;
 
-    --secondary: #6d28d9;
-    --secondary-foreground: #f8f6ff;
-    --muted: #5b21b6;
-    --muted-foreground: #e9d5ff;
-    --accent: #c084fc;
-    --accent-foreground: #ffffff;
-    --destructive: #f472b6;
-    --destructive-foreground: #ffffff;
+  --secondary: #6d28d9;
+  --secondary-foreground: #f8f6ff;
+  --muted: #5b21b6;
+  --muted-foreground: #e9d5ff;
+  --accent: #c084fc;
+  --accent-foreground: #ffffff;
+  --destructive: #f472b6;
+  --destructive-foreground: #ffffff;
 
-    --border: #7c3aed;
-    --input: #4c1d95;
-    --ring: #a78bfa;
+  --border: #7c3aed;
+  --input: #4c1d95;
+  --ring: #a78bfa;
 
-    --row-hover: #4c1d95;
-    --selected: #7c3aed;
-    --selected-foreground: #f8f6ff;
+  --row-hover: #4c1d95;
+  --selected: #7c3aed;
+  --selected-foreground: #f8f6ff;
 
-    --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 @layer base {
   * {
     border-color: var(--color-border);
   }
-  html, body {
+  html,
+  body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-display);
     letter-spacing: -0.015em;
   }
